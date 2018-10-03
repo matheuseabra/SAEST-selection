@@ -10,6 +10,7 @@ import { HomePage } from '../HomePage';
 import { LoginPage } from '../LoginPage';
 import { RegisterPage } from '../RegisterPage';
 
+
 class App extends React.Component {
     constructor(props) {
         super(props);

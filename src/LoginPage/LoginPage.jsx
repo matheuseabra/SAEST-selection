@@ -43,20 +43,20 @@ class LoginPage extends React.Component {
         const { username, password, submitted } = this.state;
         return (
             <div className="row">
-                    <div className="col-lg-4 col-md-4 col-sm-12">
-                        <h3>Login</h3>
+                    <div className="card col-lg-4 col-md-4 col-sm-12">
+                        <h3>Realize login</h3>
                         <hr/>
                         <form name="form" onSubmit={this.handleSubmit}>
                             <div className={'form-group' + (submitted && !username ? ' has-error' : '')}>
                                 <label htmlFor="username">Usuário</label>
-                                <input type="text" className="form-control" name="username" value={username} onChange={this.handleChange} />
+                                <input type="text" className="form-control" placeholder="Usuário" name="username" value={username} onChange={this.handleChange} />
                                 {submitted && !username &&
                                     <div className="help-block">Usuário é obrigatório</div>
                                 }
                             </div>
                             <div className={'form-group' + (submitted && !password ? ' has-error' : '')}>
                                 <label htmlFor="password">Senha</label>
-                                <input type="password" className="form-control" name="password" value={password} onChange={this.handleChange} />
+                                <input type="password" className="form-control" placeholder="Senha" name="password" value={password} onChange={this.handleChange} />
                                 {submitted && !password &&
                                     <div className="help-block">Senha é obrigatório</div>
                                 }
@@ -82,10 +82,29 @@ class LoginPage extends React.Component {
                         </thead>
                         <tbody>
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>Programa de Assistência Estudantil 2018</td>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquet quis dui a tincidunt. Mauris id ipsum sapien. Morbi quis condimentum ex. Nullam sollicitudin dictum nisl, a interdum risus egestas sit amet. Etiam mollis consectetur enim, ac euismod augue faucibus at.</td>
+                                <td>08/03/18</td>
+                            </tr>
+                            <tr>
+                                <td>Programa de Assistência Estudantil 2018</td>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquet quis dui a tincidunt. Mauris id ipsum sapien. Morbi quis condimentum ex. Nullam sollicitudin dictum nisl, a interdum risus egestas sit amet. Etiam mollis consectetur enim, ac euismod augue faucibus at.</td>
+                                <td>08/03/18</td>
+                            </tr>
+                            <tr>
+                                <td>Programa de Assistência Estudantil 2018</td>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquet quis dui a tincidunt. Mauris id ipsum sapien. Morbi quis condimentum ex. Nullam sollicitudin dictum nisl, a interdum risus egestas sit amet. Etiam mollis consectetur enim, ac euismod augue faucibus at.</td>
+                                <td>08/03/18</td>
+                            </tr>
+                            <tr>
+                                <td>Programa de Assistência Estudantil 2018</td>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquet quis dui a tincidunt. Mauris id ipsum sapien. Morbi quis condimentum ex. Nullam sollicitudin dictum nisl, a interdum risus egestas sit amet. Etiam mollis consectetur enim, ac euismod augue faucibus at.</td>
+                                <td>08/03/18</td>
+                            </tr>
+                            <tr>
+                                <td>Programa de Assistência Estudantil 2018</td>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquet quis dui a tincidunt. Mauris id ipsum sapien. Morbi quis condimentum ex. Nullam sollicitudin dictum nisl, a interdum risus egestas sit amet. Etiam mollis consectetur enim, ac euismod augue faucibus at.</td>
+                                <td>08/03/18</td>
                             </tr>
                         </tbody>
                       </table>
