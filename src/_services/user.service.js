@@ -1,6 +1,7 @@
 import config from 'config';
 import { authHeader } from '../_helpers';
 
+//cria o serviço de usuário atribui as funções ao obj
 export const userService = {
     login,
     logout,
@@ -21,9 +22,9 @@ function login(username, password) {
     return fetch(`${config.apiUrl}/users/authenticate`, requestOptions)
         .then(handleResponse)
         .then(user => {
-            // login successful if there's a jwt token in the response
+            //Login é bem sucedido se existe um token JWT na resposta do servidor
             if (user.token) {
-                // store user details and jwt token in local storage to keep user logged in between page refreshes
+                // Armazenda os detalhes do usuário em LocalStorage para manter usuário logado entre sessões e atualizações de página (f5)
                 localStorage.setItem('user', JSON.stringify(user));
             }
 
@@ -32,11 +33,13 @@ function login(username, password) {
 }
 
 function logout() {
-    // remove user from local storage to log user out
+    // Remove o usuário atual da LocalStorage para logout 
     localStorage.removeItem('user');
 }
 
+//Retorna todos os usuários
 function getAll() {
+    //Obj de configuração do cabeçalho das requisições
     const requestOptions = {
         method: 'GET',
         headers: authHeader()
@@ -45,6 +48,7 @@ function getAll() {
     return fetch(`${config.apiUrl}/users`, requestOptions).then(handleResponse);
 }
 
+//Retorna usuário por Id
 function getById(id) {
     const requestOptions = {
         method: 'GET',
@@ -53,7 +57,7 @@ function getById(id) {
 
     return fetch(`${config.apiUrl}/users/${id}`, requestOptions).then(handleResponse);
 }
-
+//Registra usuário
 function register(user) {
     const requestOptions = {
         method: 'POST',
@@ -63,7 +67,7 @@ function register(user) {
 
     return fetch(`${config.apiUrl}/users/register`, requestOptions).then(handleResponse);
 }
-
+//Atualiza usuário
 function update(user) {
     const requestOptions = {
         method: 'PUT',
@@ -74,7 +78,7 @@ function update(user) {
     return fetch(`${config.apiUrl}/users/${user.id}`, requestOptions).then(handleResponse);;
 }
 
-// prefixed function name with underscore because delete is a reserved word in javascript
+// Delete o usuário
 function _delete(id) {
     const requestOptions = {
         method: 'DELETE',
@@ -83,7 +87,8 @@ function _delete(id) {
 
     return fetch(`${config.apiUrl}/users/${id}`, requestOptions).then(handleResponse);
 }
-
+// Faz o tratamento da resposta, fazendo o parse, checa se o status deu algum erro, se sim rejeita a Promesa,
+// senão retorna os dados em 'data'
 function handleResponse(response) {
     return response.text().then(text => {
         const data = text && JSON.parse(text);

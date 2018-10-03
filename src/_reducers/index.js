@@ -5,6 +5,8 @@ import { registration } from './registration.reducer';
 import { users } from './users.reducer';
 import { alert } from './alert.reducer';
 
+//Importa reducers e cria reducer raíz
+
 const rootReducer = combineReducers({
   authentication,
   registration,
@@ -12,4 +14,5 @@ const rootReducer = combineReducers({
   alert
 });
 
+//Exporta o reducer raíz
 export default rootReducer;

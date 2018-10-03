@@ -15,7 +15,7 @@ export function users(state = {}, action) {
         error: action.error
       };
     case userConstants.DELETE_REQUEST:
-      // add 'deleting:true' property to user being deleted
+      // mapeia os items, checando se id de user é igual ao a ação, e então adiciona a prop 'deleting: true' ao usuáriao sendo excluído 
       return {
         ...state,
         items: state.items.map(user =>
@@ -25,22 +25,21 @@ export function users(state = {}, action) {
         )
       };
     case userConstants.DELETE_SUCCESS:
-      // remove deleted user from state
+      // remove o usuário excluído do estado
       return {
         items: state.items.filter(user => user.id !== action.id)
       };
     case userConstants.DELETE_FAILURE:
-      // remove 'deleting:true' property and add 'deleteError:[error]' property to user 
+      // remove o atribut'o deleting:true' e adiciona 'deleteError:[error]' ao 'user'
       return {
         ...state,
         items: state.items.map(user => {
           if (user.id === action.id) {
-            // make copy of user without 'deleting:true' property
+            // faz uma cópia do obj user sem deletar o atributo 'deleting'
             const { deleting, ...userCopy } = user;
-            // return copy of user with 'deleteError:[error]' property
+            // retorna uma cópia do obj user com a tributo 'deleteError:[error]'
             return { ...userCopy, deleteError: action.error };
           }
-
           return user;
         })
       };
