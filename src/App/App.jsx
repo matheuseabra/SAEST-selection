@@ -10,6 +10,7 @@ import { HomePage } from '../HomePage';
 import { LoginPage } from '../LoginPage';
 import { RegisterPage } from '../RegisterPage';
 
+const logoPath = 'http://saest.ufpa.br/portal/images/saest.png';
 
 class App extends React.Component {
     constructor(props) {
@@ -17,7 +18,7 @@ class App extends React.Component {
 
         const { dispatch } = this.props;
         history.listen((location, action) => {
-            // clear alert on location change
+            
             dispatch(alertActions.clear());
         });
     }
@@ -25,28 +26,28 @@ class App extends React.Component {
     render() {
         const { alert } = this.props;
         return (
-            <div>
-            <div className="jumbotron">
-                    <div className="container">
-                        <h1>SIGAEST</h1>
-                        <p>Sistema Gerêncial de Assistência Estudantil</p>
-                    </div>
-                </div>            
-            <div className="col-lg-12 col-md-12 col-sm-12">
-                
-                <div className="container">
-                    {alert.message &&
-                        <div className={`alert ${alert.type}`}>{alert.message}</div>
-                    }
-                    <Router history={history}>
-                        <div>
-                            <PrivateRoute exact path="/" component={HomePage} />
-                            <Route path="/login" component={LoginPage} />
-                            <Route path="/register" component={RegisterPage} />
+            <div>    
+                <div className="jumbotron">
+                        <div className="container">
+                            <img src={ logoPath } />
+                            <h1>SIGAEST</h1>
+                            <p>Sistema Gerêncial de Assistência Estudantil</p>
                         </div>
-                    </Router>
-                </div>    
-            </div>
+                    </div>            
+                <div className="col-lg-12 col-md-12 col-sm-12">            
+                    <div className="container">
+                        {alert.message &&
+                            <div className={`alert ${alert.type}`}>{alert.message}</div>
+                        }
+                        <Router history={history}>
+                            <div>
+                                <PrivateRoute exact path="/" component={HomePage} />
+                                <Route path="/login" component={LoginPage} />
+                                <Route path="/register" component={RegisterPage} />
+                            </div>
+                        </Router>
+                    </div>    
+                </div>
             </div>     
         );
     }

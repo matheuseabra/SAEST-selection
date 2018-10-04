@@ -1,4 +1,4 @@
-// array in local storage for registered users
+// array em localStorage que ar
 let users = JSON.parse(localStorage.getItem('users')) || [];
     
 export function configureFakeBackend() {
