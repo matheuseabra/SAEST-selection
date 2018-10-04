@@ -52,16 +52,14 @@ O projeto está estruturado da seguinte maneira:
 
 Abaixo estão todas as libs usadas na aplicação até o momento, e suas respectivas funcionalidades
 
-Nome | Função 
+Nome | Função da lib 
 |:---:| :-----:|
-
-redux | Status container
-redux-thunk | Middleware for asynchronous actions
-redux-logger | 
-react-redux | Linking React to Redux
-react-icons | Ícones
-react-dom | 
-react-router-dom |
+redux | Gerência de estado
+redux-thunk | Middleware para ações assíncronas
+redux--react-session | Criação de sessão com redux
+react-redux | Integração do React com Redux
+react-icons | Ícones para React   
+react-router-dom | Gerência de Rotas
 history | Cria histórico de navegação no browser
 
 ## Problemas
@@ -70,11 +68,7 @@ Se você tiver encontrar algum problema ou bug, favor criar um issue no reposit�
 
 ## Sobre
 
-The project was developed to serve as the final project for the course of Computer Engineer of UFPa. Align subjects of Software Engineer, Programming, Agile Methods and Software Architecture.
-
-It was developed by the following student:
-
-- Matheus Seabra  
+Este projeto foi desenvolvido por Matheus Seabra:  
   - github.com/matheuseabra
   - https://matheuseabra.github.io/
 
