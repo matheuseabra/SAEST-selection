@@ -22,12 +22,12 @@ SIGAEST é um sistema de gerência para assistência estudantil dos estudantes d
 
 Dê um fork ou download do repositório para a uma pasta de sua escolha, entre na pasta raiz do projeto pelo terminal:
 
-Instale as depedências 
+Instale as dependências: 
 
 ```javascript
 npm install
 ```
-Inicie o projeto
+Inicie o projeto:
 
 ```javascript
 npm start
@@ -44,11 +44,13 @@ O projeto está estruturado da seguinte maneira:
 - src
   - _actions     
   - _components
+  - _constants
   - _helpers
   - _reducers
-  - App.js
-  - Router.js
+  - _services
   - styles
+  - index.jsx
+ 
   
 
 ## Libs
@@ -59,11 +61,11 @@ Nome | Função da lib
 |:---:| :-----:|
 redux | Gerência de estado
 redux-thunk | Middleware para ações assíncronas
-redux--react-session | Criação de sessão com redux
+redux-react-session | Criação de sessão com redux
 react-redux | Integração do React com Redux
 react-icons | Ícones para React   
 react-router-dom | Gerência de Rotas
-history | Cria histórico de navegação no browser
+history | Cria um histórico de navegação no browser
 
 ## Problemas
 
