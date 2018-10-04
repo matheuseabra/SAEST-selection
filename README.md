@@ -1,5 +1,6 @@
-# <img src="http://saest.ufpa.br/portal/images/saest.png" width="70px"> 
-![Version](https://img.shields.io/badge/version-1.0-green.svg) 
+<img src="http://saest.ufpa.br/portal/images/saest.png" width="40px"> 
+![Version](https://img.shields.io/badge/version-1.0-green.svg)
+
 
 # MVP SAEST Selection
 
@@ -36,6 +37,8 @@ npm start
 ## Arquitetura
 
 É uma aplicação cliente usando React como UI + Redux para gerência de estado + Autenticação usando JWT (JSON Web Token).
+<img src="https://github.com/matheuseabra/SAEST-selection/blob/master/Untitled%20Diagram.png" width="100%">
+
 
 ## Estrutura de pastas
 
