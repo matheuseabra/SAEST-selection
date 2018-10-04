@@ -1,4 +1,4 @@
-# <img src="http://saest.ufpa.br/portal/images/saest.png" width="40px"> MVP SAEST Selection
+# <img src="http://saest.ufpa.br/portal/images/saest.png" width="70px"> 
 ![Version](https://img.shields.io/badge/version-1.0-green.svg) 
 
 # MVP SAEST Selection
