@@ -21,30 +21,30 @@ class HomePage extends React.Component {
                         <h1>Bem vindo ao SIGAEST, {user.firstName}!</h1>
                         <p>Utilize o menu abaixo para realizar suas ações dentro do sistema</p>
                         <p>
-                            <Link className="btn btn-default" to="/login"><i class="fas fa-sign-out-alt"></i> Sair</Link>
+                            <Link className="btn btn-default" to="/login"><i className="fas fa-sign-out-alt"></i> Sair</Link>
                         </p>
                     </div>
                     <div className="row menu-admin">
                         <div className="col-lg-4 col-md-4 col-sm-12">                           
                             <div className="card blue-bg">
-                                <i class="fas fa-hands-helping"></i>
+                                <i className="fas fa-hands-helping"></i>
                                 <h3>Editais</h3>
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-4 col-sm-12">
                             <div className="card blue-bg">
-                            <i class="far fa-file-alt"></i>
+                            <i className="far fa-file-alt"></i>
                                 <h3>Questionários</h3>
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-4 col-sm-12">
                             <div className="card blue-bg">
-                                <i class="fas fa-user-graduate"></i>
+                                <i className="fas fa-user-graduate"></i>
                                 <h3>Alunos</h3>
                             </div>
                         </div>
                     </div>
-                    <br />
+                    
                     <div className="row">
                         <div className="col-lg-4 col-md-4 col-sm-12">
                             <div className="card blue-bg">
@@ -73,19 +73,19 @@ class HomePage extends React.Component {
                             <ul className="list-group">
                                 {users.items.map((user, index) =>
                                     <li className="list-group-item" key={user.id}>
-                                        {user.firstName + ' ' + user.lastName}
+                                        {user.firstName + ' ' + user.lastName}          
                                         {
                                             user.deleting ? <em> - Excluindo...</em>
                                             : user.deleteError ? <span className="text-danger"> - ERROR: {user.deleteError}</span>
-                                            : <span> - <a onClick={this.handleDeleteUser(user.id)}>Excluir</a></span>
+                                            : <span><a className="pull-right" onClick={this.handleDeleteUser(user.id)}><i className="fas fa-trash-alt"></i></a></span>
                                         }
+                                        <span><a className="pull-right"><i className="fas fa-edit edit"></i></a></span>
+                                        <span><a className="pull-right"><i className="far fa-times-circle delete"></i></a></span>
                                     </li>
                                 )}
                             </ul>
                         }
-                    </div>
-                    
-               
+                    </div>        
             </div>
         );
     }
