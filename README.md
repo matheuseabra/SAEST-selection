@@ -3,15 +3,11 @@
 
 # MVP SAEST Selection
 
-## O que é?
+SIGAEST é um sistema gerencial de assistência estudantil dos estudantes universitários da Universidade Federal do Pará (UFPA).
 
-SIGAEST é um sistema de gerência para assistência estudantil dos estudantes da UFPA.
+Screenshots...
 
-## Screenshots
-
-...
-
-## Funcionalidades (v 1.0)
+## Features (v 1.0)
 - Cadastro de Usuários
 - Listagem de Usuários
 - Exclusão de Usuários
@@ -20,7 +16,7 @@ SIGAEST é um sistema de gerência para assistência estudantil dos estudantes d
 
 ## Como executar localmente
 
-Dê um fork ou download do repositório para a uma pasta de sua escolha, entre na pasta raiz do projeto pelo terminal:
+Dê um fork ou faça download do repositório para a de sua escolha, depois entre na pasta raiz do projeto pelo terminal:
 
 Instale as dependências: 
 
@@ -35,9 +31,9 @@ npm start
 
 ## Arquitetura
 
-É uma aplicação cliente usando React como UI + Redux para gerência de estado + Autenticação usando JWT (JSON Web Token).
+É uma aplicação-cliente usando React como UI + Redux para gerência de estado + Autenticação usando JWT (JSON Web Token).
 
-<img src="https://github.com/matheuseabra/SAEST-selection/blob/master/Untitled%20Diagram.png" width="50%">
+<img src="https://github.com/matheuseabra/SAEST-selection/blob/master/Untitled%20Diagram.png" width="65%">
 
 
 ## Estrutura de pastas
