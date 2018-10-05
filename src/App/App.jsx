@@ -1,7 +1,7 @@
 import React from 'react';
 import { Router, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
-
+    
 //Importa os componentes, ações e helpers
 import { history } from '../_helpers';
 import { alertActions } from '../_actions';
@@ -26,14 +26,15 @@ class App extends React.Component {
     render() {
         const { alert } = this.props;
         return (
-            <div>    
-                <div className="jumbotron">
-                        <div className="container">
-                            <img src={ logoPath } />
-                            <h1>SIGAEST</h1>
-                            <p>Sistema Gerêncial de Assistência Estudantil</p>
+            <div>
+                <nav className="navbar navbar-inverse">
+                    <div className="container">
+                        <div className="navbar-header">          
+                            <h3><img src={ logoPath } /> SIGAEST</h3>
                         </div>
-                    </div>            
+                    </div>
+                </nav>
+                    
                 <div className="col-lg-12 col-md-12 col-sm-12">            
                     <div className="container">
                         {alert.message &&

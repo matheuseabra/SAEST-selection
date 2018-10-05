@@ -78,7 +78,7 @@ function update(user) {
     return fetch(`${config.apiUrl}/users/${user.id}`, requestOptions).then(handleResponse);;
 }
 
-// Delete o usuário
+// Deleta o usuário
 function _delete(id) {
     const requestOptions = {
         method: 'DELETE',
@@ -94,7 +94,6 @@ function handleResponse(response) {
         const data = text && JSON.parse(text);
         if (!response.ok) {
             if (response.status === 401) {
-                // auto logout if 401 response returned from api
                 logout();
                 location.reload(true);
             }

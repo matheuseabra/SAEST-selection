@@ -6,6 +6,7 @@
     @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700');
 
     /* Variáveis CSS */
+
     :root {
 
         /* Tipografia */
@@ -48,29 +49,28 @@
         font-weight: var(--font-light);
         margin: 0;
         padding: 0;
+        animation: .45s ease-in-out 0s fadeIn; 
     }
 
     /* Títulos */
 
     h1, h2, h3, h4 {
-        line-height: 1.3;
+        line-height: 1.5;
         font-family: var(--font);
         font-weight: var(--font-bold);
     }
 
-   
-
-    /* Jumbotron */
-
-    .jumbotron {
-        background-color: var(--blue-dark);
-        color: var(--white);
-    }
 
     /* Botões */
 
     .btn-primary {
         padding: .8em 0;
+        font-weight: var(--font-bold);
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }
+
+    .btn-default {
+        padding: .8em;
         font-weight: var(--font-bold);
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     }
@@ -83,37 +83,60 @@
     /* Cards */
 
     .card {
-        background-color: var(-white);
         padding: 1em;
         border-radius: 3px;
         border: none;
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
         transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        transform: translateY(0px);
+    }
+
+    .card:hover {
+        transform: translateY(-8px);
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      }
+
+    .card .white-bg {
+        background-color: var(--white);
+        color: var(--black);
+    }
+
+    .blue-bg {
+        background-color: var(--blue-dark);
+        color: var(--white);
+    }
+
+    .dashboard {
+        padding: 60px 0 60px 0;
     }
 
      /* Navbar Menu */
 
     .navbar {
-    border: none;
-    margin: 0;
-    border-radius: 0px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        border: none;
+        margin: 0;
+        padding: 0;
+        border-radius: 0px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     }
 
     .navbar-inverse {
-    background-color: var(--blue-dark);
-    border-color: none;
+        background-color: var(--blue-dark);
+        border-color: none;
     }
 
-    .navbar-inverse .navbar-brand {
-    color: #FFF;
-    font-weight: var(--font-bold);
+    .navbar-inverse .navbar-header h3 {
+        color: #FFF;
+        font-weight: var(--font-bold);
+        margin: 5px 0;
+        padding: 0;
     }
 
-    .navbar-inverse .navbar-brand img {
-    margin: 0;
-    padding: 0;
+    .navbar-inverse .navbar-header h3 img {
+        margin: 0;
+        padding: 0;
     }
 
     /* Inputs */
