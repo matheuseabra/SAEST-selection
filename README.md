@@ -5,14 +5,16 @@
 
 SIGAEST é um sistema gerencial de assistência estudantil dos estudantes universitários da Universidade Federal do Pará (UFPA).
 
-Screenshots...
+<img src="https://github.com/matheuseabra/SAEST-selection/blob/master/sigaest-dashboard.png" width="100%">
 
-## Features (v 1.0)
+## Funcionalidades (1° iteração)
+
+- Dashboard Admin
+- Autenticação (Login e Logout)
 - Cadastro de Usuários
 - Listagem de Usuários
 - Exclusão de Usuários
-- Autenticação (Login e Logout)
-- Dashboard Admin
+
 
 ## Como executar localmente
 
@@ -33,7 +35,7 @@ npm start
 
 É uma aplicação-cliente usando React como UI + Redux para gerência de estado + Autenticação usando JWT (JSON Web Token).
 
-<img src="https://github.com/matheuseabra/SAEST-selection/blob/master/Untitled%20Diagram.png" width="65%">
+<img src="https://github.com/matheuseabra/SAEST-selection/blob/master/arquitetura.png" width="65%">
 
 
 ## Estrutura de pastas
@@ -65,6 +67,46 @@ react-redux | Integração do React com Redux
 react-icons | Ícones para React   
 react-router-dom | Gerência de Rotas
 history | Cria um histórico de navegação no browser
+
+## Guia de Estilo
+
+### Tipografia
+
+-font: 'Open Sans', sans-serif
+-font-light: 300
+-font-bold: 700
+
+-font-size-sm: 14px
+-font-size-md: 16px
+-font-size: 18px
+
+### Paleta de cores primária
+
+-blue-light: #B3D0E7
+-blue-dark: #337AB7
+-yellow: #ECC633
+-pink: #C32B66
+
+### Secundárias
+
+-white: #FFF
+-white-opaque: #F5F5F5
+-grey: #DDDDDD
+-dark-grey: #464646
+-black: #212121
+
+### Títulos
+
+-h1: 36px
+-h2: 24px
+-h3: 18px
+-h4: 12px
+
+### Breakpoints de dispotivos (responsividade) 
+
+-sm: 480px
+-md: 678px
+-lg: 768px
 
 ## Problemas
 
