@@ -21,7 +21,7 @@ class HomePage extends React.Component {
                     <div className="row">
                         <div className="dashboard">
                             <div className="col-lg-8 col-md-8 col-sm-12">
-                                <h1>Bem vindo ao SIGAEST, {user.firstName}!</h1>
+                                <h2>Seja bem vindo ao SIGAEST</h2>
                                 <p>Utilize o menu abaixo para realizar suas ações dentro do sistema.</p>
                                 <p>
                                     <Link className="btn btn-default" to="/login"><i className="fas fa-sign-out-alt"></i> Sair</Link>
@@ -75,7 +75,8 @@ class HomePage extends React.Component {
                         <ul className="list-group">
                             <li className="list-group-item">Nome: {user.firstName} </li>
                             <li className="list-group-item">Sobrenome: {user.lastName} </li>
-                            <li className="list-group-item">Usuário: {user.username}</li>
+                            <li className="list-group-item">Email: {user.email}</li>
+                            <li className="list-group-item">CPF: {user.cpf}</li>
                         </ul>
                     </div>
                     <div className="col-lg-6 col-md-6 col-sm-12">

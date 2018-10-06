@@ -15,7 +15,7 @@ export function configureFakeBackend() {
 
                     // find if any user matches login credentials
                     let filteredUsers = users.filter(user => {
-                        return user.username === params.username && user.password === params.password;
+                        return user.cpf === params.cpf && user.password === params.password;
                     });
 
                     if (filteredUsers.length) {
@@ -23,7 +23,8 @@ export function configureFakeBackend() {
                         let user = filteredUsers[0];
                         let responseJson = {
                             id: user.id,
-                            username: user.username,
+                            cpf: user.cpf,
+                            email: user.email,
                             firstName: user.firstName,
                             lastName: user.lastName,
                             token: 'fake-jwt-token'
@@ -31,7 +32,7 @@ export function configureFakeBackend() {
                         resolve({ ok: true, text: () => Promise.resolve(JSON.stringify(responseJson)) });
                     } else {
                         // else return error
-                        reject('Username or password is incorrect');
+                        reject('CPF ou senha não são válidos');
                     }
 
                     return;
@@ -72,13 +73,13 @@ export function configureFakeBackend() {
 
                 // register user
                 if (url.endsWith('/users/register') && opts.method === 'POST') {
-                    // get new user object from post body
+                    // Retorna um novo obj user do body da requisição
                     let newUser = JSON.parse(opts.body);
 
                     // validation
-                    let duplicateUser = users.filter(user => { return user.username === newUser.username; }).length;
+                    let duplicateUser = users.filter(user => { return user.cpf === newUser.cpf; }).length;
                     if (duplicateUser) {
-                        reject('Username "' + newUser.username + '" is already taken');
+                        reject('CPF "' + newUser.cpf + '" já cadastrado');
                         return;
                     }
 

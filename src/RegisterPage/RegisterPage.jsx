@@ -12,7 +12,8 @@ class RegisterPage extends React.Component {
             user: {
                 firstName: '',
                 lastName: '',
-                username: '',
+                cpf: '',
+                email: '',
                 password: ''
             },
             submitted: false
@@ -39,7 +40,7 @@ class RegisterPage extends React.Component {
         this.setState({ submitted: true });
         const { user } = this.state;
         const { dispatch } = this.props;
-        if (user.firstName && user.lastName && user.username && user.password) {
+        if (user.cpf && user.password) {
             dispatch(userActions.register(user));
         }
     }
@@ -49,27 +50,20 @@ class RegisterPage extends React.Component {
         const { user, submitted } = this.state;
         return (
             <div className="col-md-6">
-                <h2>Registre-se no SIGAEST!</h2>
-                <form name="form" onSubmit={this.handleSubmit}>
-                    <div className={'form-group' + (submitted && !user.firstName ? ' has-error' : '')}>
-                        <label htmlFor="firstName">Nome</label>
-                        <input type="text" placeholder="Seu nome" className="form-control" name="firstName" value={user.firstName} onChange={this.handleChange} />
-                        {submitted && !user.firstName &&
-                            <div className="help-block">Nome é obrigatório</div>
+                <h2>Crie sua conta SIGAEST</h2>
+                <form name="form" onSubmit={this.handleSubmit}>       
+                    <div className={'form-group' + (submitted && !user.cpf ? ' has-error' : '')}>
+                        <label htmlFor="cpf">CPF</label>
+                        <input type="text" placeholder="Seu CPF" className="form-control" name="cpf" value={user.cpf} onChange={this.handleChange} />
+                        {submitted && !user.cpf &&
+                        <div className="help-block">CPF é obrigatório</div>
                         }
                     </div>
-                    <div className={'form-group' + (submitted && !user.lastName ? ' has-error' : '')}>
-                        <label htmlFor="lastName">Sobrenome</label>
-                        <input type="text" placeholder="Seu sobrenome" className="form-control" name="lastName" value={user.lastName} onChange={this.handleChange} />
-                        {submitted && !user.lastName &&
-                            <div className="help-block">Sobrenome é obrigatório</div>
-                        }
-                    </div>
-                    <div className={'form-group' + (submitted && !user.username ? ' has-error' : '')}>
-                        <label htmlFor="username">Usuário</label>
-                        <input type="text" placeholder="Seu usuário" className="form-control" name="username" value={user.username} onChange={this.handleChange} />
-                        {submitted && !user.username &&
-                            <div className="help-block">Usuário é obrigatório</div>
+                    <div className={'form-group' + (submitted && !user.email ? ' has-error' : '')}>
+                        <label htmlFor="email">CPF</label>
+                        <input type="text" placeholder="Seu email" className="form-control" name="email" value={user.email} onChange={this.handleChange} />
+                        {submitted && !user.email &&
+                        <div className="help-block">Email é obrigatório</div>
                         }
                     </div>
                     <div className={'form-group' + (submitted && !user.password ? ' has-error' : '')}>

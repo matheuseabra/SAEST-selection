@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-
 import { userActions } from '../_actions';
 
 class LoginPage extends React.Component {
@@ -13,7 +12,7 @@ class LoginPage extends React.Component {
 
         //Estado inicial do componente
         this.state = {
-            username: '',
+            cpf: '',
             password: '',
             submitted: false
         };
@@ -30,28 +29,28 @@ class LoginPage extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.setState({ submitted: true });
-        const { username, password } = this.state;
+        const { cpf, password } = this.state;
         const { dispatch } = this.props;
-        if (username && password) {
-            dispatch(userActions.login(username, password));
+        if (cpf && password) {
+            dispatch(userActions.login(cpf, password));
         }
     }
 
     render() {
         // Traz props e estado pro render()
         const { loggingIn } = this.props;
-        const { username, password, submitted } = this.state;
+        const { cpf, password, submitted } = this.state;
         return (
             <div className="row">
                     <div className="col-lg-4 col-md-4 col-sm-12">
-                        <h3>Realize login</h3>
+                        <h3>Realize seu login</h3>
                         <hr/>
                         <form name="form" onSubmit={this.handleSubmit}>
-                            <div className={'form-group' + (submitted && !username ? ' has-error' : '')}>
-                                <label htmlFor="username">Usuário</label>
-                                <input type="text" className="form-control" placeholder="Usuário" name="username" value={username} onChange={this.handleChange} />
-                                {submitted && !username &&
-                                    <div className="help-block">Usuário é obrigatório</div>
+                            <div className={'form-group' + (submitted && !cpf ? ' has-error' : '')}>
+                                <label htmlFor="cpf">CPF</label>
+                                <input type="text" className="form-control" placeholder="CPF" name="cpf" value={cpf} onChange={this.handleChange} />
+                                {submitted && !cpf &&
+                                    <div className="help-block">CPF é obrigatório</div>
                                 }
                             </div>
                             <div className={'form-group' + (submitted && !password ? ' has-error' : '')}>

@@ -11,11 +11,11 @@ export const userActions = {
     delete: _delete
 };
 
-function login(username, password) {
+function login(cpf, password) {
     return dispatch => {
-        dispatch(request({ username }));
+        dispatch(request({ cpf }));
 
-        userService.login(username, password)
+        userService.login(cpf, password)
             .then(
                 user => { 
                     dispatch(success(user));
@@ -32,12 +32,13 @@ function login(username, password) {
     function success(user) { return { type: userConstants.LOGIN_SUCCESS, user } }
     function failure(error) { return { type: userConstants.LOGIN_FAILURE, error } }
 }
-
+// despacha ação de logout
 function logout() {
     userService.logout();
     return { type: userConstants.LOGOUT };
 }
 
+// despacha agão de cadastro
 function register(user) {
     return dispatch => {
         dispatch(request(user));
@@ -60,7 +61,7 @@ function register(user) {
     function success(user) { return { type: userConstants.REGISTER_SUCCESS, user } }
     function failure(error) { return { type: userConstants.REGISTER_FAILURE, error } }
 }
-
+// despacha a ação de getAll usuários
 function getAll() {
     return dispatch => {
         dispatch(request());
@@ -77,7 +78,7 @@ function getAll() {
     function failure(error) { return { type: userConstants.GETALL_FAILURE, error } }
 }
 
-// prefixed function name with underscore because delete is a reserved word in javascript
+// despacha a ação de delete usuário
 function _delete(id) {
     return dispatch => {
         dispatch(request(id));

@@ -5,7 +5,7 @@
 
 SIGAEST é um sistema gerencial de assistência estudantil dos estudantes universitários da Universidade Federal do Pará (UFPA).
 
-<img src="https://github.com/matheuseabra/SAEST-selection/blob/master/sigaest-dashboard.png" width="100%">
+<img src="https://github.com/matheuseabra/SAEST-selection/blob/master/src/images/sigaest-dashboard.png" width="100%">
 
 ## Funcionalidades (1° iteração)
 
@@ -35,7 +35,7 @@ npm start
 
 É uma aplicação-cliente usando React como UI + Redux para gerência de estado + Autenticação usando JWT (JSON Web Token).
 
-<img src="https://github.com/matheuseabra/SAEST-selection/blob/master/arquitetura.png" width="65%">
+<img src="https://github.com/matheuseabra/SAEST-selection/blob/master/src/images/arquitetura.png" width="65%">
 
 
 ## Estrutura de pastas
@@ -48,8 +48,9 @@ O projeto está estruturado da seguinte maneira:
   - _constants
   - _helpers
   - _reducers
-  - _services
+  - _services (containers)
   - styles
+  - images
   - index.jsx
  
   
