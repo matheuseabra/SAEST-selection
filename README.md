@@ -1,6 +1,6 @@
 <img src="http://saest.ufpa.br/portal/images/saest.png" width="55px"> 
 
-# MVP SAEST Selection
+# MVP SIGAEST (SAEST Selection)
 ![Version](https://img.shields.io/badge/version-1.0-green.svg)
 
 SIGAEST é um  Sistema Gerêncial de Assistência Estudantil dos estudantes universitários da Universidade Federal do Pará (UFPA).
@@ -112,7 +112,7 @@ bootstrap | Framework para layouts responsivos
 
 Se você tiver alguma sugstão ou encontrar algum bug, favor criar um issue no repositório
 
-## Sobre
+## Autor
 
 Este projeto foi desenvolvido por Matheus Seabra:  
   - github.com/matheuseabra
