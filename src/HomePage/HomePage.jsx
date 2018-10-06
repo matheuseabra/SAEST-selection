@@ -19,7 +19,7 @@ class HomePage extends React.Component {
             <div id="wrapper">            
                     
                     <div className="row">
-                        <div className="dashboard">
+                        <div className="hero">
                             <div className="col-lg-8 col-md-8 col-sm-12">
                                 <h2>Seja bem vindo ao SIGAEST</h2>
                                 <p>Utilize o menu abaixo para realizar suas ações dentro do sistema.</p>
@@ -73,8 +73,7 @@ class HomePage extends React.Component {
                     <div className="col-lg-6 col-md-6 col-sm-12"> 
                         <h3>Meus dados pessoais</h3>
                         <ul className="list-group">
-                            <li className="list-group-item">Nome: {user.firstName} </li>
-                            <li className="list-group-item">Sobrenome: {user.lastName} </li>
+               
                             <li className="list-group-item">Email: {user.email}</li>
                             <li className="list-group-item">CPF: {user.cpf}</li>
                         </ul>
@@ -87,7 +86,7 @@ class HomePage extends React.Component {
                             <ul className="list-group">
                                 {users.items.map((user, index) =>
                                     <li className="list-group-item" key={user.id}>
-                                        {user.firstName + ' ' + user.lastName}          
+                                        {user.email}          
                                         {
                                             user.deleting ? <em> - Excluindo...</em>
                                             : user.deleteError ? <span className="text-danger"> - ERROR: {user.deleteError}</span>

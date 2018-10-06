@@ -68,50 +68,51 @@ react-redux | Integração do React com Redux
 react-icons | Ícones para React   
 react-router-dom | Gerência de Rotas
 history | Cria um histórico de navegação no browser
+bootstrap | Framework para layouts responsivos
 
 ## Guia de Estilo
 
 ### Tipografia
 
--font: 'Open Sans', sans-serif
--font-light: 300
--font-bold: 700
+- font: 'Open Sans', sans-serif
+- font-light: 300
+- font-bold: 700
 
--font-size-sm: 14px
--font-size-md: 16px
--font-size: 18px
+- font-size-sm: 14px
+- font-size-md: 16px
+- font-size: 18px
 
 ### Paleta de cores primária
 
--blue-light: #B3D0E7
--blue-dark: #337AB7
--yellow: #ECC633
--pink: #C32B66
+- blue-light: #B3D0E7
+- blue-dark: #337AB7
+- yellow: #ECC633
+- pink: #C32B66
 
 ### Secundárias
 
--white: #FFF
--white-opaque: #F5F5F5
--grey: #DDDDDD
--dark-grey: #464646
--black: #212121
+- white: #FFF
+- white-opaque: #F5F5F5
+- grey: #DDDDDD
+- dark-grey: #464646
+- black: #212121
 
 ### Títulos
 
--h1: 36px
--h2: 24px
--h3: 18px
--h4: 12px
+- h1: 36px
+- h2: 24px
+- h3: 18px
+- h4: 12px
 
 ### Breakpoints de dispotivos (responsividade) 
 
--sm: 480px
--md: 678px
--lg: 768px
+- sm: 480px
+- md: 678px
+- lg: 768px
 
-## Problemas
+## Sugestões
 
-Se você tiver encontrar algum problema ou bug, favor criar um issue no repositório
+Se você tiver alguma sugstão ou encontrar algum bug, favor criar um issue no repositório
 
 ## Sobre
 

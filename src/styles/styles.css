@@ -95,19 +95,25 @@
     /* Botões */
 
     .btn-primary {
-        padding: .8em 0;
+        background: linear-gradient(45deg, var(--blue-dark), var(--blue-light));
+        border: none;
+        padding: 1em 0;
         font-weight: var(--font-bold);
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     }
 
     .btn-default {
         padding: .8em;
+        background: transparent;
         font-weight: var(--font-bold);
+        color: var(--dark-grey);
         border: none;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     }
 
     .btn-link {
         margin: 10px 0;
+        font-weight: var(--font-bold);
         color: #999;
     }
 
@@ -143,8 +149,8 @@
         color: var(--white);
     }
 
-    .dashboard {
-        padding: 0px 0 50px 0;
+    .hero {
+        padding: 25px 0 175px 0;
     }
 
      /* Navbar Menu */
@@ -194,6 +200,18 @@
 
     .list-group-item span a .delete {  
         color: var(--pink);   
+    }
+
+    /* Tabela */
+
+    table th {
+        font-family: var(--font);
+        font-weight: var(--font-bold);
+    }
+
+    table td {
+        font-family: var(--font);
+        font-weight: var(--font-light);
     }
 
     /* Inputs */
