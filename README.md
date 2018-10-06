@@ -1,7 +1,7 @@
-# <img src="http://saest.ufpa.br/portal/images/saest.png" width="55px"> 
-![Version](https://img.shields.io/badge/version-1.0-green.svg)
+<img src="http://saest.ufpa.br/portal/images/saest.png" width="55px"> 
 
 # MVP SAEST Selection
+![Version](https://img.shields.io/badge/version-1.0-green.svg)
 
 SIGAEST é um  Sistema Gerêncial de Assistência Estudantil dos estudantes universitários da Universidade Federal do Pará (UFPA).
 
@@ -18,7 +18,7 @@ SIGAEST é um  Sistema Gerêncial de Assistência Estudantil dos estudantes univ
 
 ## Como executar localmente
 
-Dê um fork ou faça download do repositório para a pasta de sua escolha, depois entre na pasta raiz do projeto pelo terminal:
+Dê um fork ou faça download do repositório para a pasta de sua escolha, depois entre na pasta raiz do projeto e digite os seguintes comandos pelo terminal:
 
 Instale as dependências: 
 
@@ -33,7 +33,7 @@ npm start
 
 ## Arquitetura
 
-É uma aplicação-cliente usando React como UI + Redux para gerência de estado + Autenticação usando JWT (JSON Web Token).
+A aplicação utiliza React para compor a UI e Redux para para gerenciar o "state" da aplicação. O Redux é uma biblioteca para gerência de estado de aplicações-cliente que segue os princípios da arquitetura flux. Abaixo está um diagrama simples de como o Redux funciona junto com o React:
 
 <img src="https://github.com/matheuseabra/SAEST-selection/blob/master/src/images/arquitetura.png" width="65%">
 
