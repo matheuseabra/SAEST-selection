@@ -80,7 +80,7 @@ bootstrap | Framework para layouts responsivos
 
 - font-size-sm: 14px
 - font-size-md: 16px
-- font-size: 18px
+- font-size-lg: 18px
 
 ### Paleta de cores primária
 

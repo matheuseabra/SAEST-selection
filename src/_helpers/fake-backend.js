@@ -1,14 +1,13 @@
-// array em localStorage que ar
+// array users buscando de localStorage
 let users = JSON.parse(localStorage.getItem('users')) || [];
     
 export function configureFakeBackend() {
     let realFetch = window.fetch;
     window.fetch = function (url, opts) {
         return new Promise((resolve, reject) => {
-            // wrap in timeout to simulate server api call
             setTimeout(() => {
 
-                // authenticate
+                // autenticação
                 if (url.endsWith('/users/authenticate') && opts.method === 'POST') {
                     // get parameters from post request
                     let params = JSON.parse(opts.body);
@@ -38,13 +37,13 @@ export function configureFakeBackend() {
                     return;
                 }
 
-                // get users
+                // recupera usuários
                 if (url.endsWith('/users') && opts.method === 'GET') {
-                    // check for fake auth token in header and return users if valid, this security is implemented server side in a real application
+                    //Checa por token de autenticação e retorna usuários se for token for válido
                     if (opts.headers && opts.headers.Authorization === 'Bearer fake-jwt-token') {
                         resolve({ ok: true, text: () => Promise.resolve(JSON.stringify(users))});
                     } else {
-                        // return 401 not authorised if token is null or invalid
+                        // return 401 não-autorizado se token não for válido
                         reject('Unauthorised');
                     }
 
@@ -61,40 +60,40 @@ export function configureFakeBackend() {
                         let matchedUsers = users.filter(user => { return user.id === id; });
                         let user = matchedUsers.length ? matchedUsers[0] : null;
 
-                        // respond 200 OK with user
+                        // responde 200 OK mais obj user na callback
                         resolve({ ok: true, text: () => JSON.stringify(user)});
                     } else {
-                        // return 401 not authorised if token is null or invalid
+                        // retorna 401 não-autorizado se token não for válido
                         reject('Unauthorised');
                     }
 
                     return;
                 }
 
-                // register user
+                // cadastro efetivamente o usuário
                 if (url.endsWith('/users/register') && opts.method === 'POST') {
                     // Retorna um novo obj user do body da requisição
                     let newUser = JSON.parse(opts.body);
 
-                    // validation
+                    // validação de CPF (superficial)
                     let duplicateUser = users.filter(user => { return user.cpf === newUser.cpf; }).length;
                     if (duplicateUser) {
                         reject('CPF "' + newUser.cpf + '" já cadastrado');
                         return;
                     }
 
-                    // save new user
+                    // Salva um novo usuário
                     newUser.id = users.length ? Math.max(...users.map(user => user.id)) + 1 : 1;
                     users.push(newUser);
                     localStorage.setItem('users', JSON.stringify(users));
 
-                    // respond 200 OK
+                    // responde com 200 OK
                     resolve({ ok: true, text: () => Promise.resolve() });
 
                     return;
                 }
 
-                // delete user
+                // Deleta um usuário
                 if (url.match(/\/users\/\d+$/) && opts.method === 'DELETE') {
                     // check for fake auth token in header and return user if valid, this security is implemented server side in a real application
                     if (opts.headers && opts.headers.Authorization === 'Bearer fake-jwt-token') {
@@ -104,24 +103,23 @@ export function configureFakeBackend() {
                         for (let i = 0; i < users.length; i++) {
                             let user = users[i];
                             if (user.id === id) {
-                                // delete user
+                                // deleta usuário
                                 users.splice(i, 1);
                                 localStorage.setItem('users', JSON.stringify(users));
                                 break;
                             }
                         }
 
-                        // respond 200 OK
+                        // responde com 200 OK
                         resolve({ ok: true, text: () => Promise.resolve() });
                     } else {
-                        // return 401 not authorised if token is null or invalid
+                        // retorna 401 não-autorizado se token não for válido
                         reject('Unauthorised');
                     }
 
                     return;
                 }
 
-                // pass through any requests not handled above
                 realFetch(url, opts).then(response => resolve(response));
 
             }, 500);

@@ -53,27 +53,26 @@ class HomePage extends React.Component {
                     <div className="row">
                         <div className="col-lg-4 col-md-4 col-sm-12">
                             <div className="card blue-bg">
-                                <i class="fab fa-font-awesome-flag"></i>
+                                <i className="fab fa-font-awesome-flag"></i>
                                 <h3>Recursos</h3>
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-4 col-sm-12">
                             <div className="card blue-bg">
-                                <i class="fas fa-hands-helping"></i>
+                                <i className="fas fa-hands-helping"></i>
                                 <h3>Estatísticas</h3>
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-4 col-sm-12">
                             <div className="card blue-bg">
-                                <i class="fas fa-database"></i>
+                                <i className="fas fa-database"></i>
                                 <h3>Banco de Dados</h3>
                             </div>
                         </div>
                     </div>                         
                     <div className="col-lg-6 col-md-6 col-sm-12"> 
                         <h3>Meus dados pessoais</h3>
-                        <ul className="list-group">
-               
+                        <ul className="list-group">  
                             <li className="list-group-item">Email: {user.email}</li>
                             <li className="list-group-item">CPF: {user.cpf}</li>
                         </ul>

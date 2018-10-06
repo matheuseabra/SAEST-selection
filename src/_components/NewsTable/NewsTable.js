@@ -4,7 +4,7 @@ const NewsTable = () => {
     return (
         <div>
             <h3>Últimas Notícias</h3>
-            <table class="table table-hover">
+            <table className="table table-hover">
             <thead>
                 <tr>
                     <th>Notícia</th>
