@@ -3,7 +3,7 @@
 
 # MVP SAEST Selection
 
-SIGAEST é um sistema gerencial de assistência estudantil dos estudantes universitários da Universidade Federal do Pará (UFPA).
+SIGAEST é um  Sistema Gerêncial de Assistência Estudantil dos estudantes universitários da Universidade Federal do Pará (UFPA).
 
 <img src="https://github.com/matheuseabra/SAEST-selection/blob/master/src/images/sigaest-dashboard.png" width="100%">
 
@@ -18,7 +18,7 @@ SIGAEST é um sistema gerencial de assistência estudantil dos estudantes univer
 
 ## Como executar localmente
 
-Dê um fork ou faça download do repositório para a de sua escolha, depois entre na pasta raiz do projeto pelo terminal:
+Dê um fork ou faça download do repositório para a pasta de sua escolha, depois entre na pasta raiz do projeto pelo terminal:
 
 Instale as dependências: 
 
@@ -37,7 +37,6 @@ npm start
 
 <img src="https://github.com/matheuseabra/SAEST-selection/blob/master/src/images/arquitetura.png" width="65%">
 
-
 ## Estrutura de pastas
 
 O projeto está estruturado da seguinte maneira:
@@ -53,7 +52,6 @@ O projeto está estruturado da seguinte maneira:
   - images
   - index.jsx
  
-  
 
 ## Libs
 
@@ -61,9 +59,9 @@ Abaixo estão todas as libs usadas na aplicação até o momento, e suas respect
 
 Nome | Função da lib 
 |:---:| :-----:|
-redux | Gerência de estado
+redux | Gerência de estado da aplicação
 redux-thunk | Middleware para ações assíncronas
-redux-react-session | Criação de sessão com redux
+redux-react-session | Criação de sessão com Redux
 react-redux | Integração do React com Redux
 react-icons | Ícones para React   
 react-router-dom | Gerência de Rotas
