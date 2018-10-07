@@ -71,7 +71,7 @@ class HomePage extends React.Component {
                         </div>
                     </div>                         
                     <div className="col-lg-6 col-md-6 col-sm-12"> 
-                        <h3>Meus dados pessoais</h3>
+                        <h3>Dados pessoais</h3>
                         <ul className="list-group">  
                             <li className="list-group-item">Email: {user.email}</li>
                             <li className="list-group-item">CPF: {user.cpf}</li>

@@ -9,8 +9,9 @@ import { PrivateRoute } from '../_components';
 import { HomePage } from '../HomePage';
 import { LoginPage } from '../LoginPage';
 import { RegisterPage } from '../RegisterPage';
+import Navbar from './../_components/Navbar/Navbar';
 
-const logoPath = 'http://saest.ufpa.br/portal/images/saest.png';
+
 
 class App extends React.Component {
     constructor(props) {
@@ -27,14 +28,7 @@ class App extends React.Component {
         const { alert } = this.props;
         return (
             <div>
-                <nav className="navbar navbar-inverse">
-                    <div className="container">
-                        <div className="navbar-header">          
-                            <h3><img src={ logoPath } /> SIGAEST</h3>
-                        </div>
-                    </div>
-                </nav>
-                    
+                <Navbar />                      
                 <div className="col-lg-12 col-md-12 col-sm-12">            
                     <div className="container">
                         {alert.message &&

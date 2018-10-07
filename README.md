@@ -1,4 +1,4 @@
-<img src="http://saest.ufpa.br/portal/images/saest.png" width="55px"> 
+<img src="http://saest.ufpa.br/portal/images/saest.png" width="45px"> 
 
 # MVP SIGAEST (SAEST Selection)
 ![Version](https://img.shields.io/badge/version-1.0-green.svg)
@@ -33,13 +33,15 @@ npm start
 
 ## Arquitetura
 
-A aplicação utiliza React para compor a UI e Redux para para gerenciar o "state" da aplicação. O Redux é uma biblioteca para gerência de estado de aplicações-cliente que segue os princípios da arquitetura flux. Abaixo está um diagrama simples de como o Redux funciona junto com o React:
+A aplicação utiliza React para compor a UI em componentes, e Redux para gerenciar o "state" (dados) que esses componentes exibem. O Redux é uma biblioteca para gerência de estado de aplicações-cliente que segue os princípios da arquitetura Flux, criada pelo Facebook.
+
+Abaixo está um diagrama simples de como o Redux funciona junto com o React:
 
 <img src="https://github.com/matheuseabra/SAEST-selection/blob/master/src/images/arquitetura.png" width="65%">
 
 ## Estrutura de pastas
 
-O projeto está estruturado da seguinte maneira:
+A aplicação está estruturada da seguinte maneira:
 
 - src
   - _actions     
@@ -102,7 +104,7 @@ bootstrap | Framework para layouts responsivos
 - h3: 18px
 - h4: 12px
 
-### Breakpoints de dispotivos (responsividade) 
+### Breakpoints de dispositivos (responsividade) 
 
 - sm: 480px
 - md: 678px
