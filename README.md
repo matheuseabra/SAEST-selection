@@ -3,17 +3,29 @@
 # MVP SIGAEST (SAEST Selection)
 ![Version](https://img.shields.io/badge/version-1.0-green.svg)
 
-SIGAEST é um  Sistema Gerêncial de Assistência Estudantil dos estudantes universitários da Universidade Federal do Pará (UFPA).
+SIGAEST é um  Sistema Gerêncial de Assistência Estudantil dos estudantes universitários da Universidade Federal do Pará.
 
+### Painel do administrador
 <img src="https://github.com/matheuseabra/SAEST-selection/blob/master/src/images/sigaest-dashboard.png" width="100%">
 
-## Funcionalidades (1° iteração)
+### Crie sua conta
+<img src="https://github.com/matheuseabra/SAEST-selection/blob/master/src/images/cadastro.png" width="100%">
 
-- Dashboard Admin
-- Autenticação (Login e Logout)
-- Cadastro de Usuários
-- Listagem de Usuários
-- Exclusão de Usuários
+### Realize login
+<img src="https://github.com/matheuseabra/SAEST-selection/blob/master/src/images/login.png" width="100%">
+
+
+## Funcionalidades (Requisitos 1° iteração)
+- Cadastro de Usuários :heavy_check_mark:
+- Listagem de Usuários :heavy_check_mark:
+- Exclusão de Usuários :heavy_check_mark:
+- Deve existir uma sessão para autenticação :heavy_check_mark:
+- Telas restritas devem estar protegidas de acesso, caso não exista sessão ou autenticação :heavy_check_mark:
+- Usuário irá poder fazer logoff :heavy_check_mark:
+- Painel do administrador :heavy_check_mark:
+- O administrador poderá ver todos os alunos cadastrados no sistema. :heavy_check_mark:
+- O administrador poderá editar suas informações. (em implementação)
+- O administrador poderá criar, excluir e editar editais ao sistema. (em implementação)
 
 
 ## Como executar localmente
@@ -65,10 +77,12 @@ redux | Gerência de estado da aplicação
 redux-thunk | Middleware para ações assíncronas
 redux-react-session | Criação de sessão com Redux
 react-redux | Integração do React com Redux
+redux-form | Criação de formulários com Redux
+redux-logger | Logger para Redux  
 react-icons | Ícones para React   
 react-router-dom | Gerência de Rotas
 history | Cria um histórico de navegação no browser
-bootstrap | Framework para layouts responsivos
+bootstrap | Framework css para layouts responsivos
 
 ## Guia de Estilo
 
