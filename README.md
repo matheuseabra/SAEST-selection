@@ -1,6 +1,6 @@
 <img src="http://saest.ufpa.br/portal/images/saest.png" width="45px"> 
 
-# MVP SIGAEST (SAEST Selection)
+# MVP SIGAEST
 ![Version](https://img.shields.io/badge/version-1.0-green.svg)
 
 SIGAEST é um  Sistema Gerêncial de Assistência Estudantil dos estudantes universitários da Universidade Federal do Pará.
